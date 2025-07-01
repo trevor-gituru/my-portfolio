@@ -28,6 +28,7 @@ function App() {
       <Home />
       <About />
       <Services />
+      <Contact />
       <Footer />
       
     </>

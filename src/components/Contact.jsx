@@ -1,43 +1,66 @@
 // @/components/Contact.jsx
 import React from 'react';
 
+const cardClass =
+  'bg-base p-6 rounded-xl transition duration-300 ease-in-out hover:shadow-[0_0_20px_#e0f780]';
+
 const Contact = () => {
   return (
-    <section id="contact" className="full-height px-lg-5">
-      <div className="container">
-
-        <div className="row justify-content-center text-center">
-          <div className="col-lg-8 pb-4" data-aos="fade-up">
-            <h6 className="text-brand">GET IN TOUCH</h6>
-            <h4>
-              Reach out to me for any freelancing opportunities, contract work or just to say hi!
-            </h4>
-          </div>
-
-          <div className="col-lg-8" data-aos="fade-up" data-aos-delay="300">
-            <form action="#" className="row g-lg-3 gy-3">
-              <div className="form-group col-md-12">
-                <input type="text" className="form-control" placeholder="Enter your name" />
-              </div>
-              <div className="form-group col-md-6">
-                <input type="number" className="form-control" placeholder="Enter your phone number" />
-              </div>
-              <div className="form-group col-md-6">
-                <input type="email" className="form-control" placeholder="Enter your email" />
-              </div>
-              <div className="form-group col-12">
-                <input type="text" className="form-control" placeholder="Enter subject" />
-              </div>
-              <div className="form-group col-12">
-                <textarea rows="4" className="form-control" placeholder="Enter your message"></textarea>
-              </div>
-              <div className="form-group col-12 d-grid">
-                <button type="submit" className="btn btn-brand">Contact me</button>
-              </div>
-            </form>
-          </div>
+    <section
+      id="contact"
+      className="min-h-screen px-6 lg:px-24 py-16 bg-base2 text-body"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="pb-8" data-aos="fade-up">
+          <h6 className="text-brand text-sm font-semibold uppercase">Contact</h6>
+          <h1 className="text-4xl font-bold mt-2 text-heading">Get In Touch</h1>
+          <p className="mt-4 text-brand max-w-2xl">
+            Reach out to me for any freelancing opportunities, contract work or just to say hi!
+          </p>
         </div>
 
+        <div
+          className={cardClass}
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <form action="#" className="grid grid-cols-1 gap-6">
+            <input
+              type="text"
+              placeholder="Enter your name"
+              className="w-full bg-base2 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input
+                type="tel"
+                placeholder="Enter your phone number"
+                className="w-full bg-base2 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full bg-base2 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Enter subject"
+              className="w-full bg-base2 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <textarea
+              rows="4"
+              placeholder="Enter your message"
+              className="w-full bg-base2 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <button
+              type="submit"
+              className=" bg-brand text-base2 font-bold w-full py-3   font-semibold rounded-md hover:bg-indigo-700 transition-colors"
+            >
+              Contact me
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
