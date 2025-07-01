@@ -25,13 +25,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <div id="content-wrapper">
-        <Home />
-        <About />
-        <Services />
-        <Contact />
-        <Footer />
-      </div>
+      <Home />
+      <About />
+      
     </>
   );
 }

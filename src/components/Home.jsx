@@ -1,12 +1,13 @@
 // @/components/Home.jsx
 import React, { useEffect, useRef } from 'react';
+import personImage from '../assets/person.png'; // Adjust path as needed
 
 const Home = () => {
   const textRef = useRef(null);
   const intervals = useRef([]);
 
   useEffect(() => {
-    const textArray = ['Telecommunication Engineer', 'Backend Developer'];
+    const textArray = ['Telecommunication Engineer', 'Full-stack Developer'];
     let currentIndex = 0;
     const typingSpeed = 100;
 
@@ -58,50 +59,59 @@ const Home = () => {
       intervals.current.push(deletingInterval);
     };
 
-    // Start typing
     typeText();
 
-    // Cleanup intervals on unmount
-    return () => {
-      intervals.current.forEach(clearInterval);
-    };
+    return () => intervals.current.forEach(clearInterval);
   }, []);
 
   return (
-    <section id="home" className="full-height px-lg-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-10">
-            <h1 className="display-4 fw-bold" data-aos="fade-up">
-              Hi, I am <span className="text-brand">Trevor Gituru</span>
-              <br />
-              I am a <br />
-              <span ref={textRef} className="fs-5 text-brand p-3" />
-            </h1>
+    <section
+      id="home"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-24 bg-base2 text-body"
+    >
+      {/* Left: Profile Image */}
+      <div
+        className="mb-10 lg:mb-0 lg:mr-12 flex-shrink-0"
+        data-aos="fade-right"
+      >
+        <img
+          src={personImage}
+          alt="Trevor Gituru"
+          className="w-[28rem] h-[28rem] rounded-2xl object-cover border-4 border-brand shadow-[0_0_50px_rgba(224,247,128,0.3)]"
+        />
+      </div>
 
-            <p
-              className="lead mt-2 mb-4"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              I specialize in designing and optimizing complex network
-              infrastructures while leveraging expertise in backend development
-              to create robust and scalable software solutions
-            </p>
-            <div data-aos="fade-up" data-aos-delay="600">
-              <a
-                href="/CV.pdf"
-                download="Trevor-Muriuki-CV"
-                target="_blank"
-                className="btn btn-brand me-3"
-              >
-                Download CV
-              </a>
-              <a href="#" className="link-custom">
-                Call: (+254) 701 342 609
-              </a>
-            </div>
-          </div>
+      {/* Right: Text Content */}
+      <div className="max-w-2xl text-center lg:text-left" data-aos="fade-left">
+        <h1 className="text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+          Hi, I am <span className="text-brand">Trevor Gituru</span>
+          <br />
+          I am a <br />
+          <span ref={textRef} className="text-xl text-brand pt-3 block h-8" />
+        </h1>
+
+        <p className="text-lg mt-4 mb-8 leading-relaxed">
+          I specialize in designing and optimizing complex network
+          infrastructures while leveraging expertise in backend development to
+          create robust and scalable software solutions.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
+          <a
+            href="/CV.pdf"
+            download="Trevor-Muriuki-CV"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-brand text-base2 font-bold px-6 py-3 rounded shadow hover:bg-brand2 transition"
+          >
+            Download CV
+          </a>
+          <a
+            href="tel:+254701342609"
+            className="font-semibold underline hover:text-brand transition"
+          >
+            Call: (+254) 701 342 609
+          </a>
         </div>
       </div>
     </section>
