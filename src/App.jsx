@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react'
 import './App.css'
 import AOS from 'aos';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -30,6 +32,7 @@ function App() {
       <Services />
       <Contact />
       <Footer />
+      <ToastContainer position="top-center"/>
       
     </>
   );
