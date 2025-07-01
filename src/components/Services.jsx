@@ -47,7 +47,7 @@ const Services = () => {
           <h1 className="text-4xl font-bold mt-2 text-heading">What I Can Do</h1>
 
           {/* Nav Buttons */}
-          <div className="mt-6 flex gap-4">
+          <div className="mt-6 flex flex-wrap gap-4 justify-center sm:justify-start">
             <button
               onClick={() => setActiveTab('frontend')}
               className={`px-4 py-2 rounded-full text-sm font-semibold border ${

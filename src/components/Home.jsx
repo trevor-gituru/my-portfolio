@@ -67,7 +67,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-24 bg-base2 text-body"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center pt-24 px-6 lg:px-24 bg-base2 text-body"
     >
       {/* Left: Profile Image */}
       <div
@@ -77,7 +77,7 @@ const Home = () => {
         <img
           src={personImage}
           alt="Trevor Gituru"
-          className="w-[28rem] h-[28rem] rounded-2xl object-cover border-4 border-brand shadow-[0_0_50px_rgba(224,247,128,0.3)]"
+          className="w-full max-w-xs sm:max-w-md lg:w-[28rem] h-auto rounded-2xl object-cover border-4 border-brand shadow-[0_0_50px_rgba(224,247,128,0.3)]"
         />
       </div>
 
