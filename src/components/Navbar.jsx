@@ -1,4 +1,3 @@
-import personImage from '../assets/person.jpg'; // Ensure path is correct
 import { useState } from 'react';
 
 function Navbar() {
@@ -29,6 +28,11 @@ function Navbar() {
         <li>
           <a href="#services" className="hover:text-brand transition-colors">
             Skills
+          </a>
+        </li>
+        <li>
+          <a href="#projects" className="hover:text-brand transition-colors">
+            Projects
           </a>
         </li>
         <li>
@@ -89,6 +93,15 @@ function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              className="hover:text-brand transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Projects
             </a>
           </li>
           <li>
