@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.razaoul.xyz/sitemap.xml
+Sitemap: https://trevor-gituru.vercel.app/sitemap.xml
