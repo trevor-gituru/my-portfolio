@@ -1,15 +1,32 @@
 // @/components/About.jsx
-import React from 'react';
+import React, { useState } from 'react';
+import Preview from './Preview';
+import aredLogo from '../assets/ared/logo.png';
 
 const cardClass =
   'bg-base p-6 rounded-xl transition duration-300  ease-in-out hover:shadow-[0_0_20px_#e0f780]';
 
 const About = () => {
+  const [showPreview, setShowPreview] = useState(false);
+  const [previewData, setPreviewData] = useState({ imgUrl: '', title: '' });
+
+  const handlePreview = (imgUrl, title) => {
+    setPreviewData({ imgUrl, title });
+    setShowPreview(true);
+  };
+
   return (
     <section
       id="about"
       className="min-h-screen px-6 lg:px-24 py-16 bg-base2 text-body"
     >
+      {showPreview && (
+        <Preview
+          imgUrl={previewData.imgUrl}
+          title={previewData.title}
+          onClose={() => setShowPreview(false)}
+        />
+      )}
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="pb-8" data-aos="fade-up">
@@ -68,6 +85,17 @@ const About = () => {
                     HTML, CSS, JS, Bootstrap
                   </li>
                 </ul>
+                <button
+                  onClick={() =>
+                    handlePreview(
+                      '/emobilis_certificate.jpeg',
+                      'Emobilis Certificate'
+                    )
+                  }
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-4 border border-brand text-brand text-sm font-semibold rounded-md  hover:shadow-md hover:bg-brand hover:text-base transition"
+                >
+                  View Certificate
+                </button>
               </div>
 
               {/* Bachelor */}
@@ -92,6 +120,14 @@ const About = () => {
                   <li>Familiar with VoIP, LTE, IoT</li>
                   <li>Network analysis & optimization</li>
                 </ul>
+                <button
+                  onClick={() =>
+                    handlePreview('/tie_degree.jpeg', 'TIE BSc Degree')
+                  }
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-4 border border-brand text-brand text-sm font-semibold rounded-md hover:shadow-md hover:bg-brand hover:text-base transition"
+                >
+                  View Degree
+                </button>
               </div>
               {/* ALX */}
               <div
@@ -100,7 +136,7 @@ const About = () => {
                 data-aos-delay="700"
               >
                 <h4 className="text-brand text-lg font-semibold">
-                  Certificate 
+                  Certificate
                 </h4>
                 <h5 className="text-xl font-semibold mt-1 text-heading">
                   Software Engineering Foundations
@@ -141,6 +177,65 @@ const About = () => {
             </h3>
 
             <div className="space-y-6">
+              {/* ARED GROUP */}
+              <div
+                className={cardClass}
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <div className="justify-between flex">
+                  <div className="flex-1">
+                    <h4 className="text-xl font-semibold text-heading">
+                      Full Stack Developer
+                    </h4>
+
+                    <a
+                      href="https://aredgroup.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand text-sm font-medium hover:underline"
+                    >
+                      ARED Group
+                    </a>
+
+                    <p className="text-muted text-sm mb-4">12/2025 – 07/2026</p>
+                  </div>
+                  <img
+                    src={aredLogo}
+                    alt="ARED Group Logo"
+                    className="w-14 h-14 object-contain rounded-lg bg-white p-1"
+                  />
+                </div>
+
+                <div className="flex-1">
+                  <ul className="list-disc list-inside space-y-2 text-sm">
+                    <li>
+                      Developed and maintained four production applications:
+                      <strong> ARED API</strong>, <strong>Admin Portal</strong>,
+                      <strong> Partner Dashboard</strong>, and
+                      <strong> SME Dashboard</strong>.
+                    </li>
+
+                    <li>
+                      Built secure REST APIs using Django REST Framework for
+                      authentication, billing, subscriptions, SME management,
+                      and partner operations.
+                    </li>
+
+                    <li>
+                      Developed modern Vue.js dashboards with analytics, user
+                      management, billing, and seamless backend API integration.
+                    </li>
+
+                    <li>
+                      Built edge device microservices enabling media
+                      synchronization, telemetry, device health monitoring,
+                      provisioning, voucher distribution, and addon
+                      installation.
+                    </li>
+                  </ul>
+                </div>
+              </div>
               {/* Internship 1 */}
               <div
                 className={cardClass}
@@ -160,8 +255,18 @@ const About = () => {
                   <li>Network setup and configuration</li>
                   <li>Help desk operations</li>
                 </ul>
+                <button
+                  onClick={() =>
+                    handlePreview(
+                      '/housing_recommendtion_letter.jpeg',
+                      'State Department of Housing and Urban Development Recommendation Letter'
+                    )
+                  }
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-4 border border-brand text-brand text-sm font-semibold rounded-md hover:shadow-md hover:bg-brand hover:text-base transition"
+                >
+                  View Recommendation Letter
+                </button>
               </div>
-
               {/* Internship 2 */}
               <div
                 className={cardClass}
@@ -180,6 +285,17 @@ const About = () => {
                   <li>UPN computation & data analysis</li>
                   <li>Customer care & issue resolution</li>
                 </ul>
+                <button
+                  onClick={() =>
+                    handlePreview(
+                      '/nssf_recommendation_letter.jpeg',
+                      'NSSF Recommendation Letter'
+                    )
+                  }
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-4 border border-brand text-brand text-sm font-semibold rounded-md hover:shadow-md hover:bg-brand hover:text-base transition"
+                >
+                  View Recommendation Letter
+                </button>
               </div>
             </div>
           </div>
