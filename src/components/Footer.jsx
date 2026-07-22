@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Left Side Text */}
           <div>
             <p className="mb-0 text-center md:text-left">
-              ©2025 Trevor Gituru. All rights reserved.
+              ©2026 Trevor Gituru. All rights reserved.
             </p>
           </div>
 
