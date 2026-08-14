@@ -234,6 +234,17 @@ const About = () => {
                       installation.
                     </li>
                   </ul>
+                  <button
+                    onClick={() =>
+                      handlePreview(
+                        '/ared_recommendation_letter.jpeg',
+                        'ARED Group Recommendation Letter'
+                      )
+                    }
+                    className="inline-flex items-center gap-2 px-4 py-2 mt-4 border border-brand text-brand text-sm font-semibold rounded-md hover:shadow-md hover:bg-brand hover:text-base transition"
+                  >
+                    View Recommendation Letter
+                  </button>
                 </div>
               </div>
               {/* Internship 1 */}
