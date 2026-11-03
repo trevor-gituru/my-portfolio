@@ -162,6 +162,15 @@ const About = () => {
                   <li>JavaScript fundamentals: scopes, closures, objects</li>
                   <li>Web fundamentals: web scraping, RESTful API basics</li>
                 </ul>
+                <a
+                  href="https://github.com/trevor-gituru/alx-higher_level_programming"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-4 border border-brand text-brand text-sm font-semibold rounded-md hover:shadow-md hover:bg-brand hover:text-base transition"
+                >
+                  View Proof
+                  <i className="bi bi-box-arrow-up-right"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -177,6 +186,87 @@ const About = () => {
             </h3>
 
             <div className="space-y-6">
+              {/* SMARTPACK */}
+              <div
+                className={cardClass}
+                data-aos="fade-up"
+                data-aos-delay="650"
+              >
+                <div className="mb-4">
+                  <h4 className="text-xl font-semibold text-heading">
+                    IoT Project Developer
+                  </h4>
+                  <p className="text-brand text-sm font-medium">
+                    SmartPack – JKUAT × KCA University (KCAU)
+                  </p>
+                  <p className="text-muted text-sm">08/2026 – 10/2026</p>
+                </div>
+
+                <ul className="list-disc list-inside space-y-2 text-sm">
+                  <li>
+                    Co-developed SmartPack, an IoT-powered smart school backpack
+                    designed to prevent posture-related developmental issues in
+                    children caused by excessive schoolbag weight.
+                  </li>
+
+                  <li>
+                    Collaborated with{' '}
+                    <a
+                      href="https://www.linkedin.com/in/calvin-githae-2832ba219/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand hover:underline font-semibold"
+                    >
+                      Calvin Githae
+                    </a>
+                    , a Mechatronics Engineering graduate, who contributed to
+                    hardware design and development.
+                  </li>
+
+                  <li>
+                    Participated in a JKUAT–KCAU collaborative initiative
+                    originating from{' '}
+                    <a
+                      href="https://www.linkedin.com/in/vincent-onywera-a197676a/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand hover:underline font-semibold"
+                    >
+                      Prof. Vincent Onywera
+                    </a>{' '}
+                    of KCA University.
+                  </li>
+
+                  <li>
+                    Worked under the academic supervision of{' '}
+                    <a
+                      href="https://www.linkedin.com/in/kabini-karanja-1a893140/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand hover:underline font-semibold"
+                    >
+                      Dr. Eng. Kabini Karanja
+                    </a>
+                    .
+                  </li>
+
+                  <li>
+                    Showcased SmartPack during KCAU Innovation Week 2026, where
+                    the project was pitched to <strong>Vimal Shah, CBS</strong>,
+                    a guest speaker at the event.
+                  </li>
+                </ul>
+
+                <a
+                  href="https://www.linkedin.com/posts/kca-university_kcauinnovationweek2026-learnleadtransform-activity-7521242978133209088-6Ejl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-4 border border-brand text-brand text-sm font-semibold rounded-md hover:shadow-md hover:bg-brand hover:text-base transition"
+                >
+                  View Innovation Week Showcase
+                  <i className="bi bi-linkedin"></i>
+                </a>
+              </div>
               {/* ARED GROUP */}
               <div
                 className={cardClass}

@@ -2,6 +2,7 @@
 import React from 'react';
 import logo from '../assets/solaris-512x512.png';
 import aredLogo from '../assets/ared/logo.png';
+import smartpackLogo from '../assets/smartpack/logo.svg';
 import partnerBrand from '../assets/ared/partnerBrand.png';
 import adminBrand from '../assets/ared/adminBrand.png';
 import smeBrand from '../assets/ared/smeBrand.png';
@@ -76,6 +77,73 @@ const projects = [
         href: 'https://sepolia.voyager.online/contract/0x0696e1ba36b1b46ccfda4a6ae963b12c932e36d1a1008d5d0a03033b12d86827',
         label: 'View SCT on Voyager',
         icon: <BiLinkExternal />,
+        primary: false,
+      },
+    ],
+  },
+  {
+    logo: smartpackLogo,
+    title: 'SmartPack',
+    subtitle: 'IoT-Powered Smart School Backpack',
+    description: (
+      <>
+        <strong>SmartPack</strong> is an intelligent IoT-powered school backpack
+        designed to prevent posture-related developmental issues in children
+        caused by excessive schoolbag weight. It integrates embedded hardware,
+        cloud services, and mobile technology to enable real-time load
+        monitoring, activity tracking, and parental alerts.
+      </>
+    ),
+    features: [
+      {
+        label: 'Intelligent Load Monitoring',
+        detail:
+          'Uses load cells and HX711 amplifiers to measure backpack weight and trigger alerts when configured limits are exceeded',
+      },
+      {
+        label: 'Activity Tracking',
+        detail: 'Tracks steps and physical activity using integrated sensors',
+      },
+      {
+        label: 'Bluetooth Classic Connectivity',
+        detail:
+          'Enables communication between the ESP32 device and Android application',
+      },
+      {
+        label: 'Parent Monitoring',
+        detail:
+          'Allows parents to monitor backpack measurements, activity, and device status through the customer dashboard',
+      },
+      {
+        label: 'Emergency SOS',
+        detail: 'Provides an emergency alert mechanism for children',
+      },
+      {
+        label: 'Multi-channel Notifications',
+        detail: 'Supports SMS, WhatsApp, and push notifications',
+      },
+      {
+        label: 'Solar Charging',
+        detail:
+          'Integrates solar charging to support device power requirements',
+      },
+      {
+        label: 'Django REST API',
+        detail:
+          'Handles device registration, sensor measurements, authentication, and notification management',
+      },
+    ],
+    links: [
+      {
+        href: 'https://smartpack.razaoul.co.ke/',
+        label: 'Customer Dashboard',
+        icon: <BiLinkExternal />,
+        primary: true,
+      },
+      {
+        href: 'https://github.com/Smart-Pack/Customer-Dashboard',
+        label: 'View Source Code',
+        icon: <FaGithub />,
         primary: false,
       },
     ],
