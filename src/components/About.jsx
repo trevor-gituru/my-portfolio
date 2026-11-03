@@ -162,6 +162,15 @@ const About = () => {
                   <li>JavaScript fundamentals: scopes, closures, objects</li>
                   <li>Web fundamentals: web scraping, RESTful API basics</li>
                 </ul>
+                <a
+                  href="https://github.com/trevor-gituru/alx-higher_level_programming"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-4 border border-brand text-brand text-sm font-semibold rounded-md hover:shadow-md hover:bg-brand hover:text-base transition"
+                >
+                  View Proof
+                  <i className="bi bi-box-arrow-up-right"></i>
+                </a>
               </div>
             </div>
           </div>
